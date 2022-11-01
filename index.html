@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寶可夢猜謎遊戲</title>
+    <link rel="icon" type="" href="/resource/poke-ball.jpg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">寶可夢猜謎遊戲</h1>
+      <ul class="progress-bar">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+      <div class="play-area">
+        <h2>猜猜我是誰?</h2>
+        <div class="answer-area">
+          <label for="answer"></label>
+          <input
+            type="text"
+            name="answer"
+            id="answer"
+            placeholder="請輸入寶可夢名字"
+          />
+          <button id="check">比對</button>
+        </div>
+        <div class="question-area">
+          <div class="question">
+            <div id="pokemon-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio src="./resource/wo-shi-shui.mp3"></audio>
+    <audio src="./resource/correct-audio.mp3"></audio>
+    <audio src="./resource/error-audio.mp3"></audio>
+    <audio src="./resource/clearance-audio.mp3"></audio>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

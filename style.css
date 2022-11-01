@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./resource/background.jpg);
+  background-size: cover;
+}
+
+.progress-bar {
+  display: flex;
+  margin: 20px;
+}
+
+.progress-bar li {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border: 1px solid #333;
+  background-color: #fff;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+
+.progress-bar li + li::before {
+  content: "—";
+  position: absolute;
+  top: 0;
+  right: 31px;
+}
+
+.play-area {
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255,255,255, .5);
+  box-shadow: 0 0 20px rgba(163, 208, 232, .8);
+}
+
+.answer-area {
+  font-size: 1.1rem;
+  display: flex;  
+  margin: 20px;
+}
+
+#answer {
+  padding: 15px 15px 15px 10px;
+  margin-right: 5px;
+}
+
+#check {
+  padding: 0 15px;
+  background: rgb(192, 230, 251);
+  border: 1px solid rgb(20, 142, 207);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#check:active {
+  transform: scale(.9);
+}
+
+#pokemon-image svg {
+  width: 200px;
+  height: 200px;
+}
+
+.complete {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./resource/7a33eb2d531dd459.gif);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.reset {
+  padding: 15px;
+  cursor: pointer;
+  border: 2px solid #9c5200;
+  border-radius: 10px;
+  background-color: #f6bd20;
+  color: #c52018;
+}
+
+.reset:hover {
+  background-color: #de9400;
+  color: #9c5200;
+}
+
+.reset:active {
+  transform: scale(.9);
+}
+
+.correct {
+  border: 3px solid rgb(20, 142, 207);
+}
+
+.wrong {
+  border: 3px solid tomato;
+  animation: .4s linear shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
